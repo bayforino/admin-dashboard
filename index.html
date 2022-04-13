@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=], initial-scale=1.0" />
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Admin Dashboard</title>
   </head>
@@ -13,137 +13,234 @@
       <!-- Main left-hand sidebar -->
 
       <div class="sidebar">
-          <div class="sidebar-title"><img src="/icons/view-dashboard.svg" alt="Dashboard"><h1>Dashboard</h1></div>
-          <ul class="nav">
-              <li><img src="icons/home.svg" alt="Home"><h2>Home</h2></li>
-              <li><img src="icons/account-box.svg" alt="Profile"><h2>Profile</h2></li>
-              <li><img src="icons/message.svg" alt="Messages"><h2>Messages</h2></li>
-              <li><img src="icons/clock.svg" alt="History"><h2>History</h2></li>
-              <li><img src="icons/clipboard-check.svg" alt="Tasks"><h2>Tasks</h2></li>
-              <li><img src="icons/account-group.svg" alt="Communities"><h2>Communities</h2></li>
-          </ul>
-          <ul class="nav">
-              <li><img src="icons/cog.svg" alt="Settings"><h2>Settings</h2></li>
-              <li><img src="icons/help-box.svg" alt="Support"><h2>Support</h2></li>
-              <li><img src="icons/shield-check.svg" alt="Privacy"><h2>Privacy</h2></li>
-          </ul>
+        <div class="sidebar-title">
+          <img src="/icons/view-dashboard.svg" alt="Dashboard" />
+          <h1>Dashboard</h1>
+        </div>
+        <ul class="nav">
+          <li>
+            <img src="icons/home.svg" alt="Home" />
+            <h2>Home</h2>
+          </li>
+          <li>
+            <img src="icons/account-box.svg" alt="Profile" />
+            <h2>Profile</h2>
+          </li>
+          <li>
+            <img src="icons/message.svg" alt="Messages" />
+            <h2>Messages</h2>
+          </li>
+          <li>
+            <img src="icons/clock.svg" alt="History" />
+            <h2>History</h2>
+          </li>
+          <li>
+            <img src="icons/clipboard-check.svg" alt="Tasks" />
+            <h2>Tasks</h2>
+          </li>
+          <li>
+            <img src="icons/account-group.svg" alt="Communities" />
+            <h2>Communities</h2>
+          </li>
+        </ul>
+        <ul class="nav">
+          <li>
+            <img src="icons/cog.svg" alt="Settings" />
+            <h2>Settings</h2>
+          </li>
+          <li>
+            <img src="icons/help-box.svg" alt="Support" />
+            <h2>Support</h2>
+          </li>
+          <li>
+            <img src="icons/shield-check.svg" alt="Privacy" />
+            <h2>Privacy</h2>
+          </li>
+        </ul>
       </div>
 
       <!-- Top bar -->
 
-      <div class="top-bar">Hi there, User.</div>
+      <div class="top-bar">
+        <div class="top-bar-top-half">
+          <div class="search-container">
+            <img
+              src="icons/magnify.svg"
+              alt="search icon"
+              class="search-icon"
+            />
+            <input type="text" class="search-bar" />
+          </div>
+          <a href="#" class="notification-icon"></a>
+            <img src="icons/bell-outline.svg" alt="notifications" />
+          </a>
+          <img
+            src="images/profile.png"
+            alt="profile picture"
+            class="small-profile-picture"
+          />
+          <h3 class="name">Tony Beckton</h3>
+          <a class="menu-icon"><img src="icons/menu.svg" alt="menu" /></a>
+        </div>
+        <div class="top-bar-bottom-half">
+          <img
+            src="images/profile.png"
+            alt="profile picture"
+            class="profile-picture"
+          />
+          <div class="account-name-container">
+            <h4>Hi there,</h4>
+            <div>
+              <h2>Tony Beckton</h2>
+              <h3>(@reformed_criminal)</h3>
+            </div>
+          </div>
+          <button class="new-button">New</button>
+          <button class="upload-button">Upload</button>
+          <button class="share-button">Share</button>
+        </div>
+      </div>
 
       <div class="content-container">
         <!-- Projects section -->
 
         <div class="projects-wrapper">
           <div class="projects-title">
-              <h2>Your Projects</h2>
+            <h2>Your Projects</h2>
           </div>
           <div class="projects-container">
             <!-- Start of individual projects -->
 
             <div class="project card">
-                <span class="color-stripe-orange"></span>
+              <span class="color-stripe-orange"></span>
               <div class="project-inner-container">
-
-                  <h3 class="project-title">Super Cool Project</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Adipisci pariatur quos odit, eaque labore
-                  </p>
-                  <div class="project-button-container">
-                      <a href="#"><img src="icons/star-plus-outline.svg" alt=""></a>
-                      <a href="#"><img src="icons/eye-plus-outline.svg" alt=""></a>
-                      <a href="#"><img src="icons/share-variant-outline.svg" alt=""></a>
-                    </div>
+                <h3 class="project-title">Super Cool Project</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Adipisci pariatur quos odit, eaque labore
+                </p>
+                <div class="project-button-container">
+                  <a href="#">
+                    <img src="icons/star-plus-outline.svg" alt="" />
+                  </a>
+                  <a href="#">
+                    <img src="icons/eye-plus-outline.svg" alt="" />
+                  </a>
+                  <a href="#">
+                    <img src="icons/share-variant-outline.svg" alt="" />
+                  </a>
+                </div>
               </div>
             </div>
 
             <div class="project card">
-                <span class="color-stripe-orange"></span>
+              <span class="color-stripe-orange"></span>
               <div class="project-inner-container">
-
-                  <h3 class="project-title">Super Cool Project</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Adipisci pariatur quos odit, eaque labore
-                  </p>
-                  <div class="project-button-container">
-                      <a href="#"><img src="icons/star-plus-outline.svg" alt=""></a>
-                      <a href="#"><img src="icons/eye-plus-outline.svg" alt=""></a>
-                      <a href="#"><img src="icons/share-variant-outline.svg" alt=""></a>
-                    </div>
+                <h3 class="project-title">Super Cool Project</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Adipisci pariatur quos odit, eaque labore
+                </p>
+                <div class="project-button-container">
+                  <a href="#">
+                    <img src="icons/star-plus-outline.svg" alt="" />
+                  </a>
+                  <a href="#">
+                    <img src="icons/eye-plus-outline.svg" alt="" />
+                  </a>
+                  <a href="#">
+                    <img src="icons/share-variant-outline.svg" alt="" />
+                  </a>
+                </div>
               </div>
             </div>
             <div class="project card">
-                <span class="color-stripe-blue"></span>
+              <span class="color-stripe-blue"></span>
               <div class="project-inner-container">
-
-                  <h3 class="project-title">Super Cool Project</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Adipisci pariatur quos odit, eaque labore
-                  </p>
-                  <div class="project-button-container">
-                      <a href="#"><img src="icons/star-plus-outline.svg" alt=""></a>
-                      <a href="#"><img src="icons/eye-plus-outline.svg" alt=""></a>
-                      <a href="#"><img src="icons/share-variant-outline.svg" alt=""></a>
-                    </div>
-              </div>
-            </div>
-            
-            <div class="project card">
-                <span class="color-stripe-green"></span>
-              <div class="project-inner-container">
-
-                  <h3 class="project-title">Super Cool Project</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Adipisci pariatur quos odit, eaque labore
-                  </p>
-                  <div class="project-button-container">
-                      <a href="#"><img src="icons/star-plus-outline.svg" alt=""></a>
-                      <a href="#"><img src="icons/eye-plus-outline.svg" alt=""></a>
-                      <a href="#"><img src="icons/share-variant-outline.svg" alt=""></a>
-                    </div>
+                <h3 class="project-title">Super Cool Project</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Adipisci pariatur quos odit, eaque labore
+                </p>
+                <div class="project-button-container">
+                  <a href="#">
+                    <img src="icons/star-plus-outline.svg" alt="" />
+                  </a>
+                  <a href="#">
+                    <img src="icons/eye-plus-outline.svg" alt="" />
+                  </a>
+                  <a href="#">
+                    <img src="icons/share-variant-outline.svg" alt="" />
+                  </a>
+                </div>
               </div>
             </div>
 
             <div class="project card">
-                <span class="color-stripe-orange"></span>
+              <span class="color-stripe-green"></span>
               <div class="project-inner-container">
-
-                  <h3 class="project-title">Super Cool Project</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Adipisci pariatur quos odit, eaque labore
-                  </p>
-                  <div class="project-button-container">
-                      <a href="#"><img src="icons/star-plus-outline.svg" alt=""></a>
-                      <a href="#"><img src="icons/eye-plus-outline.svg" alt=""></a>
-                      <a href="#"><img src="icons/share-variant-outline.svg" alt=""></a>
-                    </div>
+                <h3 class="project-title">Super Cool Project</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Adipisci pariatur quos odit, eaque labore
+                </p>
+                <div class="project-button-container">
+                  <a href="#">
+                    <img src="icons/star-plus-outline.svg" alt="" />
+                  </a>
+                  <a href="#">
+                    <img src="icons/eye-plus-outline.svg" alt="" />
+                  </a>
+                  <a href="#">
+                    <img src="icons/share-variant-outline.svg" alt="" />
+                  </a>
+                </div>
               </div>
             </div>
 
             <div class="project card">
-                <span class="color-stripe-green"></span>
+              <span class="color-stripe-orange"></span>
               <div class="project-inner-container">
-
-                  <h3 class="project-title">Super Cool Project</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Adipisci pariatur quos odit, eaque labore
-                  </p>
-                  <div class="project-button-container">
-                      <a href="#"><img src="icons/star-plus-outline.svg" alt=""></a>
-                      <a href="#"><img src="icons/eye-plus-outline.svg" alt=""></a>
-                      <a href="#"><img src="icons/share-variant-outline.svg" alt=""></a>
-                    </div>
+                <h3 class="project-title">Super Cool Project</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Adipisci pariatur quos odit, eaque labore
+                </p>
+                <div class="project-button-container">
+                  <a href="#">
+                    <img src="icons/star-plus-outline.svg" alt="" />
+                  </a>
+                  <a href="#">
+                    <img src="icons/eye-plus-outline.svg" alt="" />
+                  </a>
+                  <a href="#">
+                    <img src="icons/share-variant-outline.svg" alt="" />
+                  </a>
+                </div>
               </div>
             </div>
-              
+
+            <div class="project card">
+              <span class="color-stripe-green"></span>
+              <div class="project-inner-container">
+                <h3 class="project-title">Super Cool Project</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Adipisci pariatur quos odit, eaque labore
+                </p>
+                <div class="project-button-container">
+                  <a href="#">
+                    <img src="icons/star-plus-outline.svg" alt="" />
+                  </a>
+                  <a href="#">
+                    <img src="icons/eye-plus-outline.svg" alt="" />
+                  </a>
+                  <a href="#">
+                    <img src="icons/share-variant-outline.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
