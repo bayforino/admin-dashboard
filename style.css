@@ -1,3 +1,12 @@
+:root{
+    --main-blue: #1992d4;
+    --background-gray: #e2e8f0;
+    --main-black: #2d2d2d;
+    --color-stripe-orange: rgb(245, 183, 68);
+    --color-stripe-blue: #3791f0;
+    --color-stripe-green: hsl(151, 86%, 54%);
+}
+
 html{
     margin:0;
     padding:0;
@@ -9,6 +18,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: Roboto;
+    color: var(--main-black);
 }
 
 
@@ -19,33 +29,96 @@ body{
     height:100vh;
 }
 
-.main-container * {
+/* .main-container * {
+
     border-style: solid;
+} */
+
+.card {
+    border-radius: 6px;
+    box-shadow: 3px 3px 3px #00000015;
 }
 
 .top-bar{
     grid-column: 2 / 3;
     padding: 10px;
+    box-shadow: 0px 3px 3px #00000030;
+    z-index: 1;
 }
 
 .sidebar {
     grid-row: 1 / 3;
-    padding: 10px;
+    padding: 20px;
     min-width: 190px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    align-content: start;
+    background-color: var(--main-blue);
+    color: white;
+    letter-spacing: .03rem;
+    gap: 20px;
+    z-index: 2;
+}
+
+.sidebar-title{
+    display:grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar-title img{
+    width: 30px;
+}
+
+.sidebar img{
+    filter: invert();
+}
+
+.nav{
+    display:grid;
+    align-content: start;
+    padding-left:0;
+    gap: 16px;
+}
+
+.nav img{
+    width:17px;
+    justify-self: center;
+}
+
+.nav li{
+    list-style: none;
+    display:grid;
+    grid-template-columns: 30px 1fr;
+    margin-left: 0;
+    gap:8px;
+    align-items: center;
+}
+
+.nav li h2{
+    font-size: 11pt;
+    font-weight: 500;
+    grid-column-start: 2;
 }
 
 .content-container{
     grid-column: 2 / 3;
     display: grid;
     grid-template-columns: 4fr 1fr;
+    background-color: var(--background-gray);
+    padding-top: 10px;
 }
+
+.content-container h2{
+    font-size: 12pt;
+}
+
 .projects-wrapper{
     display: grid;
     grid-template-rows: auto 1fr;
-}
-
-.projects-title{
-    padding: 10px;
+    gap: 10px;
+    padding: 20px;
 }
 
 .projects-container{
@@ -53,61 +126,124 @@ body{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
-    padding: 10px;
     height:auto;
+
 }
 
 .project{
-    padding: 10px;
     height: 160px;
     display:grid;
     align-content: start;
+    background-color: #fff;
+    grid-template-columns: 7px 1fr;
+    grid-template-rows: 1fr;
+}
 
+.color-stripe-orange{
+    background-color: var(--color-stripe-orange);
+    border-radius: 6px 0 0 6px;
+    grid-row: 1 / 2;
+}
+
+.color-stripe-blue{
+    background-color: var(--color-stripe-blue);
+    border-radius: 6px 0 0 6px;
+    grid-row: 1 / 2;
+}
+
+.color-stripe-green{
+    background-color: var(--color-stripe-green);
+    border-radius: 6px 0 0 6px;
+    grid-row: 1 / 2;
 }
 
 .project-title{
-    font-size: 12pt;
+    font-size: 11pt; 
 }
+
+.project-inner-container{
+    display:grid;
+    align-content: center;
+    padding:30px 15px 15px 15px;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+.project-button-container{
+    justify-self: end;
+    grid-row-start: 4;
+    display:grid;
+    grid-template-columns: 30px 30px 30px;
+    gap: 10px;
+}
+
+.project-button-container a {
+    display:grid;
+    place-self: center;
+    transition:50ms ease-in-out;
+}
+
+.project-button-container a:hover{
+    opacity:70%;
+    transition:50ms ease-in-out;
+}
+
+.project-button-container img{
+    width:20px;
+    filter:invert(20%);
+    place-self: center;
+}
+
+
 
 .project p{
     color: #777;
     font-size: 10pt;
+    line-height: 1.1rem;
+    margin-top: 4px;
 }
 
 .content-sidebar{
     display:grid;
     grid-template-rows: 1fr 1fr;
     min-width: 250px;
+    gap: 20px;
+    padding:20px 20px 20px 0;
 }
 
 .announcements-wrapper, .trending-wrapper {
     display:grid;
     grid-template-rows: auto 1fr;
-    padding: 10px;
+    gap: 10px;
 }
 
 .trending {
     padding: 10px;
-    margin-top: 16px;
+    background-color: #fff;
 }
 
 .announcements {
     padding: 10px;
-    margin-top:16px;
-    
+    background-color: #fff;
 }
 
 h3{
-    font-family: montserrat;
+    font-family: roboto;
     margin:0;
 }
 
 h2{
-    font-family: montserrat;
+    font-family: roboto;
     margin:0;
 }
 
-@media screen and (max-width: 725px) {
+h1{
+    font-family: roboto;
+    font-size: 14pt;
+    font-weight: 500;
+    margin: 0;
+}
+
+@media screen and (max-width: 835px) {
     .content-sidebar{
         display:none;
     }
