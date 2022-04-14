@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
   --main-blue: #1992d4;
   --background-gray: #eaeef4;
   --main-black: #2d2d2d;
+  --text-gray: #777;
   --color-stripe-orange: rgb(245, 183, 68);
   --color-stripe-blue: #3791f0;
   --color-stripe-green: hsl(151, 86%, 54%);
@@ -29,11 +30,6 @@ body {
   grid-template-rows: 200px 1fr;
   height: 100vh;
 }
-
-/* .main-container * {
-
-    border-style: solid;
-} */
 
 .card {
   border-radius: 6px;
@@ -237,9 +233,10 @@ button {
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(auto-fit, 1fr);
+  overflow: scroll;
   gap: 20px;
-  height: auto;
+  height: fit-content;
 }
 
 .project {
@@ -306,7 +303,7 @@ button {
 }
 
 .project p {
-  color: #777;
+  color: var(--text-gray);
   font-size: 10pt;
   line-height: 1.1rem;
   margin-top: 4px;
@@ -314,10 +311,11 @@ button {
 
 .content-sidebar {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto auto;
   min-width: 250px;
   gap: 20px;
   padding: 20px 20px 20px 0;
+  height: fit-content;
 }
 
 .announcements-wrapper,
@@ -325,16 +323,74 @@ button {
   display: grid;
   grid-template-rows: auto 1fr;
   gap: 10px;
-}
-
-.trending {
-  padding: 10px;
-  background-color: #fff;
+  height: fit-content;
 }
 
 .announcements {
-  padding: 10px;
+  padding: 20px;
   background-color: #fff;
+  display: grid;
+  grid-auto-flow: row;
+  height: fit-content;
+  grid-auto-rows: auto 1px;
+  gap: 15px;
+}
+
+.announcement h5 {
+  margin: 0 0 0.4rem 0;
+}
+
+.announcement p {
+  margin: 0;
+  font-size: 9pt;
+  line-height: 0.9rem;
+  color: var(--text-gray);
+}
+
+.separator {
+  background-color: rgb(222, 222, 222);
+}
+
+.trending {
+  padding: 20px;
+  background-color: #fff;
+  height: fit-content;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.trending-person {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  height: fit-content;
+}
+
+.trending-pic {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  place-self: center;
+  border-radius: 50%;
+}
+
+.trending-person p {
+  color: var(--text-gray);
+  font-size: 9pt;
+}
+
+.trending-profile {
+  display: grid;
+  align-items: center;
+}
+
+p {
+  margin: 0;
+}
+
+h5 {
+  margin: 0;
 }
 
 h4 {
@@ -356,17 +412,42 @@ h1 {
   margin: 0;
 }
 
-.menu-icon{
-  display:none;
+.menu-icon {
+  display: none;
 }
 
-/* @media screen and (min-width: 1046px) {
-  .menu-icon {
+@media screen and (max-width: 1045px) {
+  .sidebar {
+    min-width: fit-content;
+  }
+
+  .sidebar h1 {
     display: none;
   }
-} */
 
-@media screen and (max-width: 1045px) {
+  .sidebar-title {
+    grid-template-columns: 1fr;
+    place-self: center;
+  }
+
+  .nav {
+    gap: 26px;
+  }
+
+  .nav img {
+    width: 23px;
+  }
+
+  .nav li {
+    grid-template-columns: 50px;
+  }
+
+  .nav h2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 860px) {
   .sidebar {
     display: none;
   }
@@ -374,47 +455,38 @@ h1 {
   .main-container {
     grid-template-columns: 1fr;
   }
-  
-}
-
-@media screen and (max-width: 830px) {
-
-  .main-container {
-    grid-template-columns: 1fr;
-  }
-
-  .top-bar {
-    grid-column-start: 1;
-  }
-
-  button {
-    width:60px;
-  }
-
-  .content-sidebar {
-    display: none;
-  }
-  
-
   .content-container {
     grid-template-columns: 1fr;
     grid-column: 1 / 2;
   }
+
+  .top-bar {
+    grid-column: 1 / 2;
+  }
+
+  .content-sidebar {
+    padding: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  button {
+    width: 60px;
+  }
 }
 
 @media screen and (max-width: 752px) {
-
-
   .account-name-container div {
     grid-template: 1fr 1fr / 1fr;
   }
 }
 
 @media screen and (max-width: 610px) {
-  .small-profile-picture{
-    display:none;
+  .small-profile-picture {
+    display: none;
   }
-  .top-bar-top-half{
+  .top-bar-top-half {
     grid-template-columns: 1fr 40px 30px auto;
   }
 }
@@ -441,5 +513,9 @@ h1 {
 
   .search-bar {
     display: none;
+  }
+
+  .content-sidebar {
+    grid-template-columns: 1fr;
   }
 }
