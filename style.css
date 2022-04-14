@@ -237,6 +237,7 @@ button {
   overflow: scroll;
   gap: 20px;
   height: fit-content;
+  overflow: visible;
 }
 
 .project {
